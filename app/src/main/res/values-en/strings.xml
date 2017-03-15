@@ -6,4 +6,8 @@
     <string name="titulo">App</string>
     <string name="apellido">Last Name</string>
     <string name="nombre">Name</string>
+    <string name="bienvenido">Welcome</string>
+    <string name="parte_saludo2">Welcome to this app!</string>
+    <string name="error_1">Please type your name</string>
+    <string name="error_2">Please type your last name</string>
 </resources>
