@@ -10,6 +10,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.soporte.holamundo.Principal">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ScrollView>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -46,12 +52,71 @@
             android:id="@+id/txtApellido"
             android:hint="@string/apellido" />
 
-        <Button
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:id="@+id/textView3"
+            android:textSize="18sp"
+            android:text="@string/genero" />
+
+        <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/cmdBoton"
-            android:text="@string/saludar"
-            android:onClick="saludar" />
+            android:id="@+id/cmbGenero" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:textSize="18sp"
+            android:text="@string/estadoCivil" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="93dp" >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r1"
+                android:checked="true"
+                android:text="@string/soltero" />
+
+            <RadioButton
+                android:text="@string/casado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r2"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="@string/divorciado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/r3" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cmdBoton"
+                android:text="@string/saludar"
+                android:onClick="saludar"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="@string/borrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cmdBorrar"
+                android:layout_weight="1" />
+        </LinearLayout>
 
     </LinearLayout>
 </RelativeLayout>
