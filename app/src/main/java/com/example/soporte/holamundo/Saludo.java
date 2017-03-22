@@ -9,7 +9,7 @@ public class Saludo extends AppCompatActivity {
 
     private TextView saludo;
     private Bundle b;
-    private String aux, nomb, apell;
+    private String aux, nomb, apell, genero, estadoCivil;
     private Resources res; //Objeto para acceder a los recursos
 
     @Override
@@ -25,15 +25,21 @@ public class Saludo extends AppCompatActivity {
         //Obtener los datos de la capsula
         nomb = b.getString("Nombre");
         apell = b.getString("Apellido");
+        genero = b.getString("Genero");
+        estadoCivil = b.getString("EstadoCivil");
 
-        // aux = "Hola "+nomb+" "+apell+" ¡Bienvenido a esta aplicación!";
+
 
         //Acceder a los recursos
         res =this.getResources();
 
         //Para que pueda ser en ingles
-        aux= res.getString(R.string.parte_saludo)+" "+nomb+" "+apell+" "+res.getString(R.string.parte_saludo2);
-
+        aux = res.getString(R.string.parte_saludo)+" "+nomb+" "+apell+" "+res.getString(R.string.parte_saludo2);
+        aux = aux+"\n\n"+res.getString(R.string.datos);
+        aux = aux+"\n\n"+res.getString(R.string.nombre)+": "+nomb;
+        aux = aux+"\n\n"+res.getString(R.string.apellido)+": "+apell;
+        aux = aux+"\n\n"+res.getString(R.string.genero)+": "+genero;
+        aux = aux+"\n\n"+res.getString(R.string.estadoCivil)+": "+estadoCivil;
         saludo.setText(aux);
 
     }
